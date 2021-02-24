@@ -13,7 +13,5 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
   req.on('data', (data) => {
     arr.push(JSON.parse(data));
-  }).on('end', () => {
-    res.end(JSON.stringify(arr));
   })
 }).listen(PORT, () => console.log(`Listening on ${PORT}`))
